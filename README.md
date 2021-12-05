@@ -1,44 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Inicialización del proyecto
 
-## Available Scripts
+npx crate-react-app neflix --template-redux
 
-In the project directory, you can run:
+### Proceso de Limpieza
+    elimina archivos,logos y div inicial.
 
-### `npm start`
+### Librerias utilizadas
+-styled-components
+-react-uuid
+-axios
+-react-router-dom
+-firebase
+-@material-ui/core
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### App Js- layout inicial
+- Creamos las rutas
+- Renderizamos Login o el resto del app condicionado a la existencia de un usuario 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Estilos
+-Utilizamos useStyles para crear una infraestructura que nos permita asigar estilos a cada uno de los componentes.
 
-### `npm test`
+### Crear carpetas de componentes :  Pages
+- Creamos la infraestructura básica de los componentes que representan una página: Home, Login, Profile, SignUp
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Estilos en los componentes de Pages
+-Pratrón para añadir la infraestructura de estilos a todos los components página
 
-### `npm run build`
+### Crear la carpeta componentes con componentes secundarios
+ Creamos la infraestructura básica del resto de los componentes: Banner, Header, Plans, Row.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Estilos en los componentes de componentes secundarios
+-Pratrón para añadir la infraestructura de estilos a todos lso components 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### comenzados trabajando el header
+-importamos el logo
+- Añadimos Appbar y styles
+- Creas eventListener para scroll y removemos ese Event
 
-### `npm run eject`
+### comenzados trabajando el header
+-importamos el logo
+- Añadimos Appbar y styles
+- Creas eventListener para scroll y removemos ese Event
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### comenzados trabajando el Banner
+-importamos el banner
+- Creamos las tipografias
+- Y Añadimos estilos banner
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### comenzados Login
+- Se crea el botón con styled components igual que el input que ha diferencia se estiliza el componente que ya era de material
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Componente Profile
+- Se realizo la distribución
+- y se realizo los <Plans>Texto</Plans>
+const Plans = (({children}) => { return children});
+-props styled components
 
-## Learn More
+## Componente SignUp
+-Se maqueto la interfaz y se condiciono
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Proceso de Registro y Login
+- Conectado a Firebase
+- inicializado object Auth
+- envio de formulario
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Redux
+- Habilitamos el userSlice para manejar el usuarioen el componente que queramos
+
+### Persistencia
+- useEffect 
+- se uso Navegate para redireccionar la página.
+
+### Requests
+- Se crean todos los endpoints
+- Se construye componente Rows
+
+## requests Api
+
+consumimos el api para los row y banner
